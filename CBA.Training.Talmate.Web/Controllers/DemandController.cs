@@ -9,22 +9,22 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CBA.Training.Talmate.Web.Controllers
 {
-    public class DemandRequirementController : Controller
+    public class DemandController : Controller
     {
         private readonly IMapper _mapper;
-        public DemandRequirementController(IMapper mapper)
+        public DemandController(IMapper mapper)
         {
             _mapper = mapper;
         }
         public IActionResult Index()
         {
             var Demand = GetDemand();
-            var DemandViewModel = _mapper.Map<DemandRequirementViewModel>(Demand);
+            var DemandViewModel = _mapper.Map<DemandDTO>(Demand);
             return View(DemandViewModel);
         }
-            private static DemandRequirement GetDemand()
+            private static Demand GetDemand()
             {
-                return new DemandRequirement
+                return new Demand
                 {
                     DemandId = 1,
 
