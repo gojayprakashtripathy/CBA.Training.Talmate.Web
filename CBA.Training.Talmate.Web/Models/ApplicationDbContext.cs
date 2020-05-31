@@ -12,6 +12,6 @@ namespace CBA.Training.Talmate.Web.Models
         {
 
         }
-        DbSet<DemandRequirement> demandrequirement { get; set; }
+        DbSet<Demand> demandrequirement { get; set; }
     }
 }

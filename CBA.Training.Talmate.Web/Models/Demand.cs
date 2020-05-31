@@ -4,19 +4,19 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CBA.Training.Talmate.Web.ViewModels
+namespace CBA.Training.Talmate.Web.Models
 {
-    public class DemandRequirementViewModel
+    public class Demand
     {
         [Key]
         public int DemandId { get; set; }
-        [Required]
+
         public String PrimarySkill { get; set; }
-        [Required]
+
         public String SecondarySkill { get; set; }
-        [Required]
+
         public DateTime StartByDate { get; set; }
-        [Required]
+
         public float ExperienceInYears { get; set; }
         public String Location { get; set; }
     }

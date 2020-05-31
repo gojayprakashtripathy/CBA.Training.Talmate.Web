@@ -12,7 +12,7 @@ namespace CBA.Training.Talmate.Web
     {
         public DemandProfile()
         {
-            CreateMap<DemandRequirement, DemandRequirementViewModel>();
+            CreateMap<Demand, DemandDTO>();
         }
         
     }
