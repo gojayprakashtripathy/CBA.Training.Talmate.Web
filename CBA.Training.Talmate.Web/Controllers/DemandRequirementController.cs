@@ -32,8 +32,6 @@ namespace CBA.Training.Talmate.Web.Controllers
 
                     SecondarySkill = "spring",
 
-
-
                     ExperienceInYears = 5,
                     Location = "xyz"
                 };
