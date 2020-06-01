@@ -1,8 +1,42 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@*@{
+        ViewData["Title"] = "Home Page";
+    }*@
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="col-3 offset-3">
+    <h1 class="btn btn-info form-control text-white">Login</h1>
+    <br />
+</div>
+<div class="col-8 offset-1">
+    <div class="col-8 offset-1">
+        <div class="col-12 border p-3">
+            <div class="table table-striped table-bordered" style="width:100%">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-3 offset-3">
+                        </div>
+                        <label class="control-label">UserId</label>
+                        <input @*asp-for="Username"*@ class="form-control" type="text" style="width:100%" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Password</label>
+                        <input @*asp-for="Password"*@ class="form-control" type="password" style="width:100%" />
+                    </div>
+                    <div action="/action_page.php">
+                        <br />
+                        <label>Role</label>
+                        @*<select name="IsPM" id="IsPM">*@
+                        <select>
+                            <option value="IsBM">Bench Manager</option>
+                            <option value="IsPM">Project Manager</option>
+
+                        </select>
+                    </div>
+                    <br><br>
+                    <div class="form-group">
+                        <input class="btn btn-success form-control " asp-controller="Demand" asp-action="Mapping" type="submit" value="Submit" />
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
 </div>

@@ -18,23 +18,27 @@ namespace CBA.Training.Talmate.Web.Controllers
         }
         public IActionResult Index()
         {
+            return View();
+        }
+        public IActionResult Mapping()
+        {
             var Demand = GetDemand();
             var DemandViewModel = _mapper.Map<DemandDTO>(Demand);
             return View(DemandViewModel);
         }
-            private static Demand GetDemand()
+        private static Demand GetDemand()
+        {
+            return new Demand
             {
-                return new Demand
-                {
-                    DemandId = 1,
+                DemandId = 1,
 
-                    PrimarySkill = "Java",
+                PrimarySkill = "Java",
 
-                    SecondarySkill = "spring",
+                SecondarySkill = "spring",
 
-                    ExperienceInYears = 5,
-                    Location = "xyz"
-                };
-            }
+                ExperienceInYears = 5,
+                Location = "xyz"
+            };
         }
     }
+}
