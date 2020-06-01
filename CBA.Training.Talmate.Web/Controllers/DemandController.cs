@@ -20,6 +20,10 @@ namespace CBA.Training.Talmate.Web.Controllers
         {
             return View();
         }
+        public IActionResult Demandlist()
+        {
+            return View();
+        }
         public IActionResult Mapping()
         {
             var Demand = GetDemand();
