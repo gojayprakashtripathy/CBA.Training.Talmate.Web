@@ -7,12 +7,11 @@ using System.ComponentModel.DataAnnotations;
 namespace CBA.Training.Talmate.Web.Models
 {
     public class User
-    {
-        [Key]
-        public int Id { get; set; }       
-        public string Username { get; set; }        
+    {            
+        [Required]
+        public string Username { get; set; }   
+        [Required]
         public string Password { get; set; }
-        public string Token { get; set; }
-        public bool IsPM { get; set; }
+       
     }
 }

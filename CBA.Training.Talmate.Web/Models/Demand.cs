@@ -8,16 +8,17 @@ namespace CBA.Training.Talmate.Web.Models
 {
     public class Demand
     {
-        [Key]
+        [Key]        
         public int DemandId { get; set; }
-
-        public String PrimarySkill { get; set; }
-
-        public String SecondarySkill { get; set; }
-
-        public DateTime StartByDate { get; set; }
-
-        public float ExperienceInYears { get; set; }
-        public String Location { get; set; }
+        [Required]
+        public string PrimarySkills { get; set; }
+        [Required]
+        public string SecondarySkills { get; set; }
+        [Required]
+        public string Location { get; set; }
+        [Required]
+        public DateTime? Start_By_Date { get; set; }
+        [Required]
+        public int Experience { get; set; }
     }
 }

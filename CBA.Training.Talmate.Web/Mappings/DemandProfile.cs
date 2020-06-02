@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using CBA.Training.Talmate.Web.Models;
-using CBA.Training.Talmate.Web.ViewModels;
+using CBA.Training.Talmate.Web.ModelsDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
