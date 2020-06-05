@@ -46,7 +46,7 @@
 </script>
 
 
-<h2>Show Demand</h2>
+<h2>View Demand</h2>
 
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search skill .......">
@@ -62,9 +62,9 @@
         @{
             if (Model != null)
             {
+                int count = 1;
                 foreach (var item in Model)
-                {
-                    int count = 1;
+                {                  
                     <tr>
                         <th scope="row">@count</th>
                         <td>@item.PrimarySkills</td>
@@ -72,7 +72,7 @@
                         <td style="display:none;">@item.Start_By_Date</td>
                         <td style="display:none;">@item.Experience</td>
                         <td style="display:none;">@item.Location</td>
-                        <td><button type="button" title="Details" class="btn btn-primary btnSelect"><i class="glyphicon glyphicon-eye-open"></i></button></td>
+                        <td><button type="button" title="Show Details" class="btn btn-primary btnSelect"><i class="glyphicon glyphicon-eye-open"></i></button></td>
                     </tr>
                     count++;
                 }

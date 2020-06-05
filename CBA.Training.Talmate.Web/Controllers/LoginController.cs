@@ -23,10 +23,10 @@ namespace CBA.Training.Talmate.Web.Controllers
             _settings = settings.Value;
         }
         [HttpGet]       
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
 
-            return View();
+            return await Task.FromResult(View());
         }
        
        
@@ -50,15 +50,15 @@ namespace CBA.Training.Talmate.Web.Controllers
                 }
             }
             if (loginResultData != null && loginResultData.Token != null)
-            {
+            {                
                 HttpContext.Session.SetString("JWTToken", loginResultData.Token);
                 Console.WriteLine(HttpContext.Session.GetString("JWTToken"));
-                return RedirectToAction("Index", "Dashboard");                
+                return await Task.FromResult(RedirectToAction("Index", "Dashboard"));                
             }                
             else
             {
                 ViewBag.message = "Invalid username and password!";
-                return View();
+                return await Task.FromResult(View());
             }
         }       
 

@@ -8,9 +8,9 @@ namespace CBA.Training.Talmate.Web.Controllers
 {
     public class DashboardController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return await Task.FromResult(View());
         }
     }
 }

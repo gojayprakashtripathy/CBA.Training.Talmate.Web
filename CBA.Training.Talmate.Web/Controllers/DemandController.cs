@@ -66,7 +66,7 @@ namespace CBA.Training.Talmate.Web.Controllers
 
 
         [HttpGet]        
-        public async Task<IActionResult> Show()
+        public async Task<IActionResult> ViewDemand()
         {
             var demand = new List<Demand>();
             using (var client = new HttpClient())
@@ -80,7 +80,7 @@ namespace CBA.Training.Talmate.Web.Controllers
                 var result = response.Content.ReadAsStringAsync().Result;
                 demand = JsonConvert.DeserializeObject<List<Demand>>(result);
             }
-            return View(demand);
+            return await Task.FromResult(View(demand));
         }
 
         

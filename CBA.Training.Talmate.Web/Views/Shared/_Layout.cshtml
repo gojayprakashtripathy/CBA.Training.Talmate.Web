@@ -74,8 +74,10 @@
                     Talmate Applocation
                 </span>
                 @{
-                    var userName = "Jay";
+                    var userName = "Jay";                    
+
                 }
+
 
                 <ul id="userDdlMenu" class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -106,8 +108,8 @@
                             <i class="glyphicon glyphicon-equalizer"></i><span style="margin-left:10px;"> Demand <b class="caret"></b></span>
                         </a>
                         <ul class="dropdown-menu analyticsMenuItem" aria-labelledby="navbarDemandDropdownMenuLink">
-                            <li><a class="dropdown-item" href="Demand/Create"><i class="fa fa-gear"></i><span style="margin-left:5px;"> Create</span></a></li>
-                            <li><a class="dropdown-item" href="Demand/Show"><i class="fa fa-paw"></i><span style="margin-left:5px;"> Show </span></a></li>
+                            <li><a class="dropdown-item" href="/Demand/Create"><i class="fa fa-gear"></i><span style="margin-left:5px;"> Create</span></a></li>
+                            <li><a class="dropdown-item" href="/Demand/ViewDemand"><i class="fa fa-paw"></i><span style="margin-left:5px;"> View </span></a></li>
                         </ul>
                     </li>
 
@@ -116,8 +118,7 @@
                             <i class="glyphicon glyphicon-user"></i><span style="margin-left:10px;"> Recommendation <b class="caret"></b></span>
                         </a>
                         <ul class="dropdown-menu adminMenuItem" aria-labelledby="navbarRecommendationDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/Recommendation/Seek"><i class="glyphicon glyphicon-pushpin"></i><span style="margin-left:5px;"> Seek</span></a></li>
-                            <li><a class="dropdown-item" href="/Recommendation/RouteToPM"><i class="glyphicon glyphicon-screenshot"></i><span style="margin-left:5px;"> Route</span></a></li>
+                            <li><a class="dropdown-item" href="/Recommendation/Seek"><i class="glyphicon glyphicon-pushpin"></i><span style="margin-left:5px;"> Seek</span></a></li>                            
                             <li><a class="dropdown-item" href="/Recommendation/Accept"><i class="glyphicon glyphicon-move"></i><span style="margin-left:5px;"> Accept</span></a></li>
 
                         </ul>

@@ -12,13 +12,7 @@ namespace CBA.Training.Talmate.Web.Controllers
         public async Task<IActionResult> Seek()
         {
             return await Task.FromResult(View());
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> RouteToPM()
-        {
-            return await Task.FromResult(View());
-        }
+        }        
 
         [HttpGet]
         public async Task<IActionResult> Accept()
