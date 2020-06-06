@@ -75,7 +75,7 @@
                 </a>
 
                 <span id="lblHeader" class="header-title">
-                    Talmate Applocation
+                    Talmate Application
                 </span>
                 @{
                     var userName = HttpContextAccessor.HttpContext.Session.GetString("UserName");
@@ -102,7 +102,7 @@
                             }
 
                         </ul>
-                        </li>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -148,7 +148,7 @@
                                         {
                                             <li><a class="dropdown-item" href="/Recommendation/Seek"><i class="glyphicon glyphicon-pushpin"></i><span style="margin-left:5px;"> Seek</span></a></li>
                                         }
-                                       else
+                                        else
                                         {
                                             <li><a class="dropdown-item" href="/Recommendation/AcceptReject"><i class="glyphicon glyphicon-move"></i><span style="margin-left:5px;"> Accept/Reject</span></a></li>
                                         }
@@ -159,9 +159,9 @@
                         </ul>
 
                     </div>
-                    } 
                 }
-                </nav>
+            }
+        </nav>
     </header>
 
     <div id="page-wrapper">
@@ -174,11 +174,23 @@
         </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Talmate Application
+    @*<footer class="border-top footer text-muted justify-content-center">
+            <div class="container" >
+                &copy; 2020 - Talmate Application
+            </div>
+        </footer>*@
+
+    <div id="space" style="height:60px;">
+        
+    </div>
+
+    <div class="footerWrap">
+        <div class="footer">
+            <div class="footerContent">
+                <p>&copy; 2020 - Talmate Application</p>
+            </div>
         </div>
-    </footer>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>

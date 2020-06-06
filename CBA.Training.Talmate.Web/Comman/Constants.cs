@@ -12,5 +12,9 @@ namespace CBA.Training.Talmate.Web.Comman
         public static string User = "user";
         public static string Demand = "demand";
         public static string Recommendation = "recommendation";
+        public static string Seek = "seek";
+        public static string RouteRecommendation = "routerecommendation";
+        public static string Accept = "accept";
+        public static string Reject = "reject";
     }
 }

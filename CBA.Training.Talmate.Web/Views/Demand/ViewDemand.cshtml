@@ -11,7 +11,7 @@
     $(document).ready(function () {
 
         // code to read selected table row cell data (values).
-        $("#myTable").on('click', '.btnSelect', function () {
+        $("#skillsListTable").on('click', '.btnSelect', function () {
             // get the current row
             var tr = $(this).closest("tr");
 
@@ -23,11 +23,11 @@
         });
     });
 
-    function myFunction() {
+    function searchSkills() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
+        table = document.getElementById("skillsListTable");
         tr = table.getElementsByTagName("tr");
         for (i = 0; i < tr.length; i++) {
             td = tr[i].getElementsByTagName("td")[0];
@@ -49,8 +49,8 @@
 <h2>View Demand</h2>
 
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search skill .......">
-<table class="table table-bordered" id="myTable">
+<input type="text" id="myInput" onkeyup="searchSkills()" placeholder="Search skill .......">
+<table class="table table-bordered" id="skillsListTable">
     <thead class="grey lighten-2">
         <tr>
             <th scope="col">#</th>
@@ -72,7 +72,7 @@
                         <td style="display:none;">@item.Start_By_Date</td>
                         <td style="display:none;">@item.Experience</td>
                         <td style="display:none;">@item.Location</td>
-                        <td><button type="button" title="Show Details" class="btn btn-primary btnSelect"><i class="glyphicon glyphicon-eye-open"></i></button></td>
+                        <td><button type="button" title="Show Details" class="btn btn-primary btnSelect"><span class="glyphicon glyphicon-book"></span></button></td>
                     </tr>
                     count++;
                 }
