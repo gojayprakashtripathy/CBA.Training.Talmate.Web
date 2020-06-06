@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using CBA.Training.Talmate.Web.Comman;
 using CBA.Training.Talmate.Web.Models;
 using CBA.Training.Talmate.Web.ModelsDTO;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -24,8 +25,8 @@ namespace CBA.Training.Talmate.Web.Controllers
         }
         [HttpGet]       
         public async Task<IActionResult> Index()
-        {
-
+        {               
+           
             return await Task.FromResult(View());
         }
        
@@ -52,7 +53,8 @@ namespace CBA.Training.Talmate.Web.Controllers
             if (loginResultData != null && loginResultData.Token != null)
             {                
                 HttpContext.Session.SetString("JWTToken", loginResultData.Token);
-                Console.WriteLine(HttpContext.Session.GetString("JWTToken"));
+                HttpContext.Session.SetString("UserName", loginResultData.Username);
+                HttpContext.Session.SetString("RoleName", loginResultData.RoleName);
                 return await Task.FromResult(RedirectToAction("Index", "Dashboard"));                
             }                
             else
@@ -60,7 +62,19 @@ namespace CBA.Training.Talmate.Web.Controllers
                 ViewBag.message = "Invalid username and password!";
                 return await Task.FromResult(View());
             }
-        }       
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Logout()
+        {
+            HttpContext.Session.Remove("JWTToken");
+            HttpContext.Session.Remove("UserName");
+            HttpContext.Session.Remove("RoleName");
+            HttpContext.Session.Clear();
+
+            return await Task.FromResult(RedirectToAction("Index", "Login"));
+        }
+
 
     }
 }

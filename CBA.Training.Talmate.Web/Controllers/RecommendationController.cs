@@ -15,7 +15,7 @@ namespace CBA.Training.Talmate.Web.Controllers
         }        
 
         [HttpGet]
-        public async Task<IActionResult> Accept()
+        public async Task<IActionResult> AcceptReject()
         {
             return await Task.FromResult(View());
         }

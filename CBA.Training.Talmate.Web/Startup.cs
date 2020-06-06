@@ -23,7 +23,7 @@ namespace CBA.Training.Talmate.Web
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {            
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
@@ -31,6 +31,8 @@ namespace CBA.Training.Talmate.Web
             services.AddSession(options => {
                 options.IdleTimeout = TimeSpan.FromMinutes(10);  
             });
+            services.AddMvc();
+            services.AddHttpContextAccessor();
 
         }
 
